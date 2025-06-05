@@ -1,0 +1,14 @@
+module_config {
+  module_library : "sample_component/libsample_component_component.so"
+  components {
+    class_name : "SampleComponent"
+    config {
+      name : "sample_component"
+      config_file_path: "sample_component/conf/sample_component.pb.txt"
+      flag_file_path: "sample_component/conf/sample_component.conf"
+      readers {
+        channel: "/apollo/sample_component"
+      }
+    }
+  }
+}
